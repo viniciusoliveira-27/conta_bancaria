@@ -8,8 +8,6 @@ do {
     menu();
     opcao = readlinesync.questionInt("Digite a opcao desejada: ")
 
-
-
     if (opcao === 9) {
         about();
         process.exit(0)
@@ -53,29 +51,26 @@ do {
 
         default:
             console.log("Opcao invalida!")
-
-
     }
 
 } while (true)
 
 
-
 function menu(): void {
     console.log(colors.bg.whitebright, colors.fg.blackstrong)
-    console.log("**************************************************")
-    console.log("\n                   ViniBanks                    \n")
-    console.log("**************************************************")
-    console.log("               1 - Criar Conta                           ")
-    console.log("               2 - Listar todas as Contas                        ")
-    console.log("               3 - Buscar Conta por Numero                     ")
-    console.log("               4 - Atualizar Dados da Conta                         ")
-    console.log("               5 - Apagar Conta                           ")
-    console.log("               6 - Sacar                        ")
-    console.log("               7 - Depositar                     ")
-    console.log("               8 - Transferir valores entre Contas                         ")
-    console.log("               9 - Sair                            ")
-    console.log("\n**************************************************\n", colors.reset)
+    console.log("************************************************************")
+    console.log("\n                   ViniBanks                            \n")
+    console.log("************************************************************")
+    console.log("               1 - Criar Conta                              ")
+    console.log("               2 - Listar todas as Contas                   ")
+    console.log("               3 - Buscar Conta por Numero                  ")
+    console.log("               4 - Atualizar Dados da Conta                 ")
+    console.log("               5 - Apagar Conta                             ")
+    console.log("               6 - Sacar                                    ")
+    console.log("               7 - Depositar                                ")
+    console.log("               8 - Transferir valores entre Contas          ")
+    console.log("               9 - Sair                                     ")
+    console.log("\n************************************************************\n", colors.reset)
 
 }
 function about() {
