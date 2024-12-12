@@ -1,24 +1,49 @@
 import readlinesync = require("readline-sync");
 import { colors } from "./src/util/Cores";
 import {Conta} from "./src/model/Conta";
+import { ContaCorrente } from "./src/model/ContaCorrente";
+import { ContaPoupanca } from "./src/model/ContaPoupanca";
 
 let opcao: number
 
 export function main() {
 
-    //Cria novas instancias (Objetos) da Classe Conta
-    const c1 = new Conta(1, 123, 1, "Vinicius", 100000);
-    c1.visualizar();
-    console.log(c1.sacar(200000));
-    c1.visualizar();
+    // //Cria novas instancias (Objetos) da Classe Conta
+    // const c1 = new Conta(1, 123, 1, "Vinicius", 100000);
+    // c1.visualizar();
+    // console.log(c1.sacar(200000));
+    // c1.visualizar();
 
-    const c2 = new Conta(1, 123, 2, "Brunildo", 50000);
-    c2.visualizar()
-    c2.depositar(500.00);
-    c2.visualizar()
+    // const c2 = new Conta(1, 123, 2, "Brunildo", 50000);
+    // c2.visualizar()
+    // c2.depositar(500.00);
+    // c2.visualizar()
 
+    //Contas correntes
+
+    // const cc1 = new ContaCorrente(3, 789, 1, "Galega", 200000, 1000);
+    // cc1.visualizar();
+    // //Saque na CC
+    // cc1.sacar(200500);
+    // cc1.visualizar();
+
+    // //Deposito na CC
+    // cc1.depositar(1000);
+    // cc1.visualizar();
+
+    const cp1 = new ContaPoupanca(3, 7895, 2, "Galega", 200000, 27);
+    cp1.visualizar();
+    //Saque na Conta Poupança
+    cp1.sacar(200);
+    cp1.visualizar();
+
+    //Deposito na Conta Poupança
+    cp1.depositar(1000);
+    cp1.visualizar();
+
+    console.log("")
     do {
-        console.log(colors.bg.whitebright, colors.fg.blackstrong)
+        console.log(colors.bg.purple, colors.fg.blackstrong)
         console.log("************************************************************")
         console.log("\n                   ViniBanks                            \n")
         console.log("************************************************************")
@@ -83,6 +108,6 @@ export function main() {
 
 } 
 function about() {
-    console.log("\nCriado por Vinicius\n")
+    console.log("\nSistema criado pelo desenvolvedor Vinicius Oliveira.\n")
 }
 main()

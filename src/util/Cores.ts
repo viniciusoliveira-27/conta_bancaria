@@ -31,6 +31,7 @@ export const colors = {
         white: "\x1b[47m",
         gray: "\x1b[100m",
         crimson: "\x1b[48m",
+        purple: "\x1b[48;5;129m",
         blackbright: "\x1b[0;100m",
         redbright: "\x1b[0;101m",
         greenbright: "\x1b[0;102m",
