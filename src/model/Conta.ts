@@ -1,4 +1,4 @@
-export class Conta{
+export abstract class Conta{
 
     //definição do modelo de dados (esses são os atributos da conta)
     private _numero: number;
