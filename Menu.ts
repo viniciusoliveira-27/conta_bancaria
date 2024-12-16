@@ -37,11 +37,12 @@ export function main() {
         console.log("               6 - Sacar                                    ")
         console.log("               7 - Depositar                                ")
         console.log("               8 - Transferir valores entre Contas          ")
-        console.log("               9 - Sair                                     ")
+        console.log("               9 - Buscar por Nome do Titular               ")
+        console.log("               0 - Sair                                     ")
         console.log("\n************************************************************\n", colors.reset)
         opcao = readlinesync.questionInt("Digite a opcao desejada: ")
 
-        if (opcao === 9) {
+        if (opcao === 0) {
             about();
             process.exit(0)
         }
@@ -107,7 +108,7 @@ export function main() {
 
                     console.log("Digite o novo Nome do titular: ")
                     titular = readlinesync.question('')
-                    
+
                     console.log("Digite o novo Saldo da Conta: ")
                     saldo = readlinesync.questionFloat('');
 
@@ -187,6 +188,12 @@ export function main() {
                 keyPress();
                 break;
             case 9:
+
+                console.log("\nDigite o nome do titular: ")
+                titular = readlinesync.question("")
+                contas.procurarPorTitular(titular);
+
+                keyPress()
                 break;
 
             default:

@@ -11,6 +11,16 @@ export class ContaController implements ContaRepository {
 
 
 
+    procurarPorTitular(titular: string): void {
+        //filtragem dos dados
+        let buscaPorTitular = this.listaContas.filter(conta => 
+            conta.titular.toUpperCase().includes(titular.toUpperCase())
+        )
+        //Listagem dos dados
+        buscaPorTitular.forEach(conta => conta.visualizar());
+    }
+
+
     //metodos CRUD
     procuraPorNumero(numero: number): void {
         const buscaConta = this.buscarNoArray(numero);
