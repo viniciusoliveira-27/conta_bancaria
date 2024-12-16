@@ -36,7 +36,7 @@ export function main() {
         console.log("               5 - Apagar Conta                             ")
         console.log("               6 - Sacar                                    ")
         console.log("               7 - Depositar                                ")
-        console.log("               8 - Transferir valores entre Contas          ")
+        console.log("               8 - PIX entre Contas                         ")
         console.log("               9 - Buscar por Nome do Titular               ")
         console.log("               0 - Sair                                     ")
         console.log("\n************************************************************\n", colors.reset)
