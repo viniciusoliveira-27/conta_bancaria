@@ -7,7 +7,7 @@ export interface ContaRepository{
     listarTodas(): void;
     cadastrar(conta: Conta): void;
     atualizar(conta: Conta): void;
-    deletar(numero: Conta): void;
+    deletar(numero: number): void;
 
     //Metodos Bancarios
     sacar(numero: number, valor: number): void;
