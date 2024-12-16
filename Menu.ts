@@ -7,7 +7,7 @@ import { ContaController } from "./src/controller/ContaController";
 
 export function main() {
 
-    let opcao, numero, agencia, tipo, saldo, limite, aniversario: number;
+    let opcao, numero, agencia, tipo, saldo, limite, aniversario, numeroDestino, valor: number;
     let titular: string;
     const tipoContas = ['Conta Corrente', 'Conta Poupanca'];
 
@@ -146,16 +146,46 @@ export function main() {
 
             case 6:
                 console.log(`\nSaque!\n`)
-                break;
+
+                console.log(`Digite o numero da conta:`)
+                numero = readlinesync.questionInt("")
+
+                console.log(`Digite o valor do Saque:`)
+                valor = readlinesync.questionInt("")
+
+                contas.sacar(numero, valor)
+
                 keyPress();
+                break;
             case 7:
                 console.log(`\nDeposito\n`)
-                break;
+
+                console.log(`Digite o numero da conta origem:`)
+                numero = readlinesync.questionInt("")
+
+                console.log(`Digite o valor do Deposito:`)
+                valor = readlinesync.questionInt("")
+
+                contas.depositar(numero, valor)
+
                 keyPress();
+                break;
             case 8:
                 console.log(`\nPIX!\n`)
-                break;
+
+                console.log(`Digite o numero da conta origem:`)
+                numero = readlinesync.questionInt("")
+
+                console.log(`Digite o numero da conta destino:`)
+                numeroDestino = readlinesync.questionInt("")
+
+                console.log(`Digite o valor do PIX:`)
+                valor = readlinesync.questionInt("")
+
+                contas.transferir(numero, numeroDestino, valor);
+
                 keyPress();
+                break;
             case 9:
                 break;
 
